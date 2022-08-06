@@ -23,7 +23,6 @@ dependencies {
 tasks.register('preRunServer'){
     dependsOn tasks.build
     doLast{
-        println("ea")
         def runDir = "${projectDir.path}/run"
         def filef = new File(runDir + '/plugins/' + this.rootProject.name + '.jar')
         if(!filef.parentFile.exists()) {filef.parentFile.mkdirs()}
